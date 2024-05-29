@@ -19,13 +19,29 @@ let bor = document.getElementById("bor")
 let replace = document.getElementById("replace")
 
 function boldText() {
-    textarea.style.fontWeight = "bolder"
+        if (textarea.style.fontWeight == "bolder") {
+            textarea.style.fontWeight = 'normal'
+        }
+        else{
+            textarea.style.fontWeight = 'bolder'
+        }
+    
 }
 function italicText() {
-    textarea.style.fontStyle = 'italic'
+    if (textarea.style.fontStyle == "italic") {
+        textarea.style.fontStyle = 'normal'
+    }
+    else{
+        textarea.style.fontStyle = 'italic'
+    }
 }
 function underlineText() {
-    textarea.style.textDecoration = 'underline'
+    if (textarea.style.textDecoration == "underline") {
+        textarea.style.textDecoration = 'none'
+    }
+    else{
+        textarea.style.textDecoration = 'underline'
+    }
 }
 function fontChange() {
     let selected = selectFont.value
@@ -82,7 +98,13 @@ function alignCenter() {
     textarea.style.textAlign = "center"
 }
 function strikeThrough() {
-    textarea.style.textDecoration = "line-through"
+    // textarea.style.textDecoration = "line-through"
+    if (textarea.style.textDecoration == "line-through") {
+        textarea.style.textDecoration = 'none'
+    }
+    else{
+        textarea.style.textDecoration = 'line-through'
+    }
 }
 function findText() {
     let num = 0;
